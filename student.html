@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="AVIN v4.5.4, AVIN.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="http://localhost:1152/css_style/images/mbr-favicon.png" type="image/x-icon">
+  <meta name="description" content="Web Site Generator Description">
+  <title>Student Login</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/tether/tether.min.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/socicon/css/styles.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/dropdown/css/style.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/animate.css/animate.min.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/theme/css/style.css">
+  <link rel="stylesheet" href="http://localhost:1152/css_style/AVIN/css/mbr-additional.css" type="text/css">
+  
+  
+</head>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<body>
+<section id="menu-2" data-rv-view="5">
+
+    <nav class="navbar navbar-dropdown transparent navbar-fixed-top bg-color">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <a href="index.html" class="socicon socicon-strava mbr-iconfont mbr-iconfont-menu navbar-logo"></a>
+                        <a class="navbar-caption" href="http://localhost:1152/">AVIN</a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown open"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://AVIN.com/" aria-expanded="true">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="http://forums.AVIN.com/">Live Chat<br></a><a class="dropdown-item" href="https://AVIN.com/">E-mail</a><a class="dropdown-item" href="https://AVIN.com/">Contact us</a></div></li></ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+
+<section class="engine"><a href="http://localhost:1152/">bootstrap carousel</a></section><section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background mbr-after-navbar" id="header2-c" data-rv-view="39" style="background-image: url(http://localhost:1152/css_style/images/landscape.jpg);">
+
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
+    </div>
+
+    <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">
+
+            <div class="container">
+                <div class="mbr-section row">
+                    <div class="mbr-table-md-up">
+                        <div class="mbr-table-cell col-md-5 content-size text-xs-center text-md-right">
+
+                            <h3 class="mbr-section-title display-2">STUDENTS ARE THE PILLORS OF FUTURE WORLD</h3>
+
+                            <div class="mbr-section-text">
+                                <p>Creating future for some one is not a easy task. Person who does is known as Teachers.</p>
+                            </div>
+                            
+                                <div class="mbr-figure"><img src="http://localhost:1152/student.jpg"></div>
+
+                        </div>
+                        <div class="mbr-table-cell mbr-valign-top mbr-left-padding-md-up col-md-7 image-size" style="width: 50%;">
+                            
+                            <!-- Form Code Start -->
+                            <div class="mbr-section-btn">
+            
+                                <form class="text-center border border-light p-5" method="post" action="http://localhost:1152/ssubmit" style="background-color:white;">
+                                    <p class="h4 mb-4">Student Sign in</p>
+                                    <input type="text"  class="form-control mb-4" placeholder="User-id" name="uid">
+                                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name="pass">
+                                    <div class="d-flex justify-content-around">
+                                        <div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="http://localhost:1152/forgot">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-info btn-block my-4" type="http://localhost:1152/submit">Sign in</button>
+                                    <p>Not a member?
+                                        <a href="http://localhost:1152/register">Register</a>
+                                    </p>
+                                </form>
+                            <!-- Form Code End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
+
+  <script src="http://localhost:1152/css_style/web/assets/jquery/jquery.min.js"></script>
+  <script src="http://localhost:1152/css_style/tether/tether.min.js"></script>
+  <script src="http://localhost:1152/css_style/bootstrap/js/bootstrap.min.js"></script>
+  <script src="http://localhost:1152/css_style/jarallax/jarallax.js"></script>
+  <script src="http://localhost:1152/css_style/dropdown/js/script.min.js"></script>
+  <script src="http://localhost:1152/css_style/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="http://localhost:1152/css_style/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="http://localhost:1152/css_style/smooth-scroll/smooth-scroll.js"></script>
+  <script src="http://localhost:1152/css_style/theme/js/script.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <input name="animation" type="hidden">
+  </body>
+</html>
