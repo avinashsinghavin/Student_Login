@@ -23,6 +23,7 @@
     background-size: cover;
     }
 </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
   <div class="bg"><br><br>
@@ -35,96 +36,57 @@
             </tr><tr><td colspan=2><hr></td></td>
             <tr>
                 <td>Name</td>
-                <td><input type=text name="name" id="textname" size="30"></td>
+                <td><input type=text name="name" id="textname" size="30" required></td>
             </tr>
             <tr>
                 <td>Age:</td>
-                <td><input type=number name="age" id="textname" size="2"></td>
+                <td><input type=number name="age" id="textname" size="2" required min="15" max="80"></td>
             </tr>
             <tr>
                 <td>UserId</td>
-                <td><input type=text name="uid" id="textname" size="30"></td>
+                <td><input type=text name="uid" id="textname" size="30" required></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type=password name="pw1" id="textname" size="30"></td>
+                <td><input type=password name="pw1" id="textname" size="30" required></td>
             </tr><tr>
                 <td>Password</td>
-                <td><input type=password name="pw2" id="textname" size="30"></td>
+                <td><input type=password name="pw2" id="textname" size="30" required></td>
             </tr>
             <tr>
                 <td>Father Name</td>
-                <td><input type="text" name="fathername" id="fathername" size="30"></td>
+                <td><input type="text" name="fathername" id="fathername" size="30" required> </td>
             </tr>
             <tr>
                 <td>Sex</td>
-                <td><input type="radio" name="sex" value="male" size="10">Male
-                    <input type="radio" name="sex" value="Female" size="10">Female</td>
-            </tr>
-            <tr>
-                <td>City</td>
-                <td>
-                    <select name="City">
-                        <option value="-1" selected>select..</option>
-                        <option value="New Delhi">NEW DELHI</option>
-                        <option value="Mumbai">MUMBAI</option>
-                        <option value="Goa">GOA</option>
-                        <option value="Patna">PATNA</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Course</td>
-                <td><select name="Course">
-                    <option value="-1" selected>select..</option>
-                    <option value="B.Tech">B.TECH</option>
-                    <option value="MCA">MCA</option>
-                    <option value="MBA">MBA</option>
-                    <option value="BCA">BCA</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td>District</td>
-                <td><select name="District">
-                    <option value="-1" selected>select..</option>
-                    <option value="Nalanda">NALANDA</option>
-                    <option value="UP">UP</option>
-                    <option value="Goa">GOA</option>
-                    <option value="Patna">PATNA</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td>State</td>
-                <td><select Name="State">
-                    <option value="-1" selected>select..</option>
-                    <option value="New Delhi">NEW DELHI</option>
-                    <option value="Mumbai">MUMBAI</option>
-                    <option value="Goa">GOA</option>
-                    <option value="Bihar">BIHAR</option>
-                    </select></td>
+                <td><input type="radio" name="sex" value="male" size="10" required>Male
+                    <input type="radio" name="sex" value="Female" size="10" required>Female</td>
             </tr>
             <tr>
                 <td>PinCode</td>
-                <td><input type="text" name="pincode" id="pincode" size="30"></td>
+                <td><input type="number" name="pincode" id="pincode" required max="999999" min="100000"></td>
             </tr>
             <tr>
-                <td>EmailId</td>
-                <td><input type="text" name="emailid" id="emailid" size="30"></td>
+                <td>Email Id</td>
+                <td><input type="email"  name="emailid" id="emailid"  size="30" required ></td>
             </tr>
             <tr>
                 <td>DOB</td>
-                <td><input type="text" name="dob" id="dob" size="30"></td>
+                <td><input type="date" name="dob" id="dob" required min='1899-01-01' max='2001-12-12'></td>
             </tr>
             <tr>
                 <td>MobileNo</td>
-                <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+                <td><input type="number" name="mobileno" id="mobileno" required min="6000000000" max="9999999999"></td>
             </tr>
             <tr>
                 <td><input type="reset"></td>
-                    <td colspan="2"><input type="submit" value="Submit Form" /></td>
+                    <td colspan="2"><input type="submit" value="Submit Form" required></td>
             </tr>
          </table>
     </form>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>

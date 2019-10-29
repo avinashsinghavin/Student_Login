@@ -40,7 +40,6 @@ app.post('/ssubmit', function (req, res) {
           var dad = result[i]['father'];
           var email=result[i]['email'];
           if(pass == pas && uid ===sr){
-              //res.write(" "+name+age);
               fs.readFile('studentlog.html', (err, data) => {
                 if (err) {
                   res.writeHead(500);
@@ -56,26 +55,15 @@ app.post('/ssubmit', function (req, res) {
                 res.end(data, 'utf8');
             });
           } else{
-            fs.readFile('login.html', (err, data) => {
-                if (err) {
-                  res.writeHead(500);
-                  res.end(err);
-                  return;
-                }
-                data = data.toString().replace(/\{\{'someVal'\}\}/, 'aavinas');
-                res.writeHead(200);
-                res.end(data, 'utf8');
-            });
+            res.sendFile(__dirname+"/"+"alerting.html");
           }    
         } catch(e){
+          res.sendFile(__dirname+"/"+"alerting.html");
           console.log(e);
         }
         //db.close();  
       });
     });
-});
-app.get('/teacher', function( req, res){
-    res.sendFile(__dirname+"/"+"teacher.html");
 });
 app.post('/sregister', function( req, res){
     var name = req.body.name;
@@ -89,7 +77,7 @@ app.post('/sregister', function( req, res){
     var dob = req.body.dob;
     var ph = req.body.mobileno;
     if(pw1 === pw2){
-        try{
+      try{
             MongoClient.connect(url, function(err, db1) {//db
                 var db = db1.db('giet');//changed no need 
                 var myobj = { Name:name,Age:age,phone:ph,email:email,userid:uid,password:pw1,dob:dob,father:father,pin:pin };
@@ -100,12 +88,22 @@ app.post('/sregister', function( req, res){
             });
             res.sendFile(__dirname+"/student.html");
         }catch(e){
-            res.write("sdfdsfd");
             res.sendFile(__dirname+"/register.html");
         } 
     }else{
         res.sendFile(__dirname+"/register.html");
     }
+});
+app.post('/usercheck', function (req, res) {
+  var sr = req.body.uid;
+  MongoClient.connect(url, function(err, db1) {
+    var db=db1.db('giet');
+    //res.write(sr+"\n");
+    var query = { userid : sr };//{age:parseInt(41)} for integer ..
+    db.collection("std").find(query).toArray(function(err, result){    
+      res.sendFile(__dirname+"/userexist.html");
+    });
+  });
 });
 var server = app.listen(1152,function(){
     console.log('Node Server Is running 1152');
