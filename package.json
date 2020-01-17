@@ -1,0 +1,23 @@
+{
+  "name": "project_student_login",
+  "version": "1.0.0",
+  "description": "student login",
+  "main": "jsfile.js",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avinashsinghavin/Student_Login.git"
+  },
+  "author": "avinash kumar singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avinashsinghavin/Student_Login/issues"
+  },
+  "homepage": "https://github.com/avinashsinghavin/Student_Login#readme"
+}
